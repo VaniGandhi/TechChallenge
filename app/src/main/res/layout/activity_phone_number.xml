@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PhoneNumberActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+
+    <TextView
+        android:id="@+id/txtGetOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline"
+        android:text="@string/get_otp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/gilroysemibold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtEnterPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuidelineEnd"
+
+
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+       app:layout_constraintTop_toBottomOf="@id/txtGetOTP"
+        android:text="@string/enter_your_phone_number"
+        android:textColor="@color/black"
+        android:fontFamily="@font/gilroyetrabold"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/txtCountryCode"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/stroke_bg"
+
+        app:layout_constraintTop_toBottomOf="@id/txtEnterPhoneNumber"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="12dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/_91"
+        android:textSize="16sp"
+        android:fontFamily="@font/gilroyetrabold"
+       />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtEnterPhoneNumber"
+        app:layout_constraintStart_toEndOf="@id/txtCountryCode"
+        app:layout_constraintBottom_toBottomOf="@id/txtCountryCode"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuidelineEnd"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/gilroyetrabold"
+        android:background="@drawable/stroke_bg"
+        android:letterSpacing="0.05"
+        android:maxLength="10"
+        android:inputType="number"
+        android:hint="@string/_9562673169"
+        android:layout_marginStart="10dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        android:background="@drawable/yellow_bg"
+        style="@style/PrimaryButton"
+        android:text="@string/_continue"
+        android:paddingHorizontal="15dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/gilroyetrabold"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

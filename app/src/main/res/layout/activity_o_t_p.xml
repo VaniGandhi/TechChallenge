@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PhoneNumberActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideline"
+        android:text="@string/_91_9562673169"
+        android:textColor="@color/black"
+        android:fontFamily="@font/gilroysemibold"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvPhoneNumber"
+        app:layout_constraintBottom_toBottomOf="@id/tvPhoneNumber"
+        app:layout_constraintStart_toEndOf="@id/tvPhoneNumber"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/txtEnterOTP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/verticalGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneNumber"
+        android:text="@string/enter_your_otp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/gilroyetrabold"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/stroke_bg"
+
+        app:layout_constraintTop_toBottomOf="@id/txtEnterOTP"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="12dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:hint="9999"
+        android:maxLength="4"
+        android:inputType="number"
+        android:textSize="16sp"
+        android:fontFamily="@font/gilroyetrabold"
+        />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edOTP"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/verticalGuideline"
+        android:background="@drawable/yellow_bg"
+        style="@style/PrimaryButton"
+        android:text="@string/_continue"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        android:fontFamily="@font/gilroyetrabold"/>
+
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btContinue"
+        app:layout_constraintBottom_toBottomOf="@id/btContinue"
+        app:layout_constraintStart_toEndOf="@id/btContinue"
+        android:layout_marginLeft="10dp"
+        android:text="00:59"
+        android:fontFamily="@font/gilroyetrabold"
+        android:textColor="@color/black"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
